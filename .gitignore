@@ -168,3 +168,6 @@ debug/
 *.temp
 tmp/
 temp/
+
+# ProjectDocs-Refrences
+PROJECT-DOCS/References/*
