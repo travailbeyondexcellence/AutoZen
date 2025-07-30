@@ -5,7 +5,7 @@
     "website": "https://nextjs-15-starter-tailwind-core.vercel.app/",
     "license": "MIT",
     "scripts": {
-        "dev": "next dev --turbopack",
+        "dev": "next dev --turbopack --port 6400",
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
