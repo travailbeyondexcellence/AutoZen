@@ -1,3 +1,4 @@
+import FAQ from '@/app/(MainApp)/FAQ';
 import NavigationBar from '@/app/(MainApp)/NavigationBar';
 import PricingSection from '@/app/(MainApp)/PricingSection';
 
@@ -10,6 +11,7 @@ const PricingPage = () => {
                 </div>
             </div>
             <PricingSection />
+            <FAQ />
         </main>
     );
 };

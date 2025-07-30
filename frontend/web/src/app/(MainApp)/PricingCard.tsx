@@ -3,6 +3,8 @@ import Link from 'next/link';
 interface PricingCardProps {
     title: string;
     price: string;
+    priceDetail?: string;
+    originalPrice?: string;
     description: string;
     features: string[];
     isPopular?: boolean;
@@ -13,6 +15,8 @@ interface PricingCardProps {
 const PricingCard: React.FC<PricingCardProps> = ({
     title,
     price,
+    priceDetail,
+    originalPrice,
     description,
     features,
     isPopular = false,
@@ -33,8 +37,17 @@ const PricingCard: React.FC<PricingCardProps> = ({
                 <h3 className='text-2xl font-bold text-gray-900 dark:text-white'>{title}</h3>
                 <p className='mt-2 text-gray-600 dark:text-gray-300'>{description}</p>
                 <div className='mt-4'>
+                    {originalPrice && (
+                        <span className='text-xl text-gray-500 line-through dark:text-gray-400'>
+                            {originalPrice}
+                        </span>
+                    )}
                     <span className='text-4xl font-bold text-gray-900 dark:text-white'>{price}</span>
-                    <span className='text-gray-600 dark:text-gray-300'>/month</span>
+                    {priceDetail ? (
+                        <span className='text-gray-600 dark:text-gray-300'> {priceDetail}</span>
+                    ) : (
+                        <span className='text-gray-600 dark:text-gray-300'>/month</span>
+                    )}
                 </div>
             </div>
             <ul className='mb-8 space-y-3'>
