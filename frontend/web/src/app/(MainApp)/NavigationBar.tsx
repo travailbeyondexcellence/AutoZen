@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import ThemeSwitch from '@/app/(delete-this-and-modify-page.tsx)/ThemeSwitch';
+import ThemeSwitch from '@/app/(MainApp)/ThemeSwitch';
 
 const NavigationBar = () => {
     return (
