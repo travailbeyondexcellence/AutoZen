@@ -1,12 +1,19 @@
+import CTA from '@/app/(MainApp)/CTA';
+import Features from '@/app/(MainApp)/Features';
+import Hero from '@/app/(MainApp)/Hero';
 import NavigationBar from '@/app/(MainApp)/NavigationBar';
 
 const HomePage: React.FC = () => {
     return (
-        <main className='mx-auto flex h-screen max-w-7xl flex-col pt-6 font-[family-name:var(--font-geist-sans)]'>
-            <NavigationBar />
-            <div className='flex flex-1 items-center justify-center'>
-                <h1 className='text-4xl font-bold'>Home Page</h1>
+        <main className='font-[family-name:var(--font-geist-sans)]'>
+            <div className='sticky top-0 z-50 bg-white/80 backdrop-blur-md dark:bg-gray-900/80'>
+                <div className='mx-auto max-w-7xl pt-6'>
+                    <NavigationBar />
+                </div>
             </div>
+            <Hero />
+            <Features />
+            <CTA />
         </main>
     );
 };
